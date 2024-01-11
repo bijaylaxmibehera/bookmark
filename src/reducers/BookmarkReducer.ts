@@ -1,9 +1,6 @@
-import {BookmarkActionType, BookmarkType} from "../types/Bookmark.type";
+import {BookmarkActionType,BookmarkStateType} from "../types/Bookmark.type";
 
 
-export type BookmarkStateType ={
-    bookmarks:BookmarkType[]
-}
 
 export const initialState : BookmarkStateType = {
     bookmarks : []
