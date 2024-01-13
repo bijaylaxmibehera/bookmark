@@ -3,7 +3,7 @@ import { BookmarkReducer, initialState } from '../reducers/BookmarkReducer'
 import { BookmarkContextType, BookmarkProviderProps } from '../types/Bookmark.type';
 
 
-const BookmarkContext = createContext<BookmarkContextType | undefined>(
+export const BookmarkContext = createContext<BookmarkContextType | undefined>(
   undefined,
 )
 
@@ -16,3 +16,12 @@ export const BookmarkProvider: React.FC<BookmarkProviderProps> = ({ children }) 
     </BookmarkContext.Provider>
   );
 };
+
+
+export const useBookmark= ()=>{
+  const context=useContext(BookmarkContext);
+  if(!context){
+    throw new Error("useBookmarks must be within the provider!")
+  }
+  return context
+}

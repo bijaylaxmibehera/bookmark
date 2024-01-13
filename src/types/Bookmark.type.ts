@@ -1,7 +1,7 @@
 import React from "react"
 
 export type BookmarkType = {
-    id:number,
+    id:string,
     title:string,
     url:string,
 }
@@ -14,7 +14,7 @@ export type BookmarkType = {
 export type RemoveBookmarkAction={
     type:"REMOVE_BOOKMARK",
     payload:{
-        id:number,
+        id:string,
     }
 }
 
