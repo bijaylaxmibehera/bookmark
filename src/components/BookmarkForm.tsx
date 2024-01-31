@@ -27,10 +27,10 @@ export const BookmarkForm = () => {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      <input type="text" name="title" placeholder="Enter title" required value={formData.title} onChange={inputHandler} />
-      <input type="url" name="url" placeholder="Enter url" required value={formData.url} onChange={inputHandler} />
-      <button type="submit">Add</button>
+    <form onSubmit={handleFormSubmit} className="flex  justify-center my-4">
+      <input type="text" name="title" placeholder="Enter title" required value={formData.title} onChange={inputHandler} className="border border-gray-300 p-2 rounded-md focus:outline-none focus:border-blue-500 mr-2"/>
+      <input type="url" name="url" placeholder="Enter url" required value={formData.url} onChange={inputHandler} className="border border-gray-300 p-2 rounded-md focus:outline-none focus:border-blue-500 mr-4"/>
+      <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add</button>
     </form>
   );
 };
